@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cvmykml6cevwk"]
+
+[ext_resource type="PackedScene" uid="uid://b7abymtnnufh4" path="res://Scenes/DraggableRect.tscn" id="1_0f027"]
+
+[node name="Node2D" type="Node2D" unique_id=1282817691]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1758805085]
+
+[node name="DraggableRect" parent="." unique_id=1516638363 instance=ExtResource("1_0f027")]

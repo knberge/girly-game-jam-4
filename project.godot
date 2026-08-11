@@ -15,7 +15,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Girly Game"
-config/features=PackedStringArray("4.7", "GL Compatibility")
+run/main_scene="uid://cvmykml6cevwk"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [rendering]
