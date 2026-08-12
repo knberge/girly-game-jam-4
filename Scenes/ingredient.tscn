@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://frb1tfnktgbr"]
+
+[ext_resource type="Script" uid="uid://crrkytnii1x7o" path="res://Scenes/ingredient.gd" id="1_70mii"]
+[ext_resource type="Script" uid="uid://dhq2gphp35u6n" path="res://Scripts/clickable_region.gd" id="2_70mii"]
+[ext_resource type="Texture2D" uid="uid://dath74vvl7ccx" path="res://icon.svg" id="2_pc44i"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vp2j4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ww4r6"]
+size = Vector2(100, 101)
+
+[node name="Ingredient" type="Node2D" unique_id=209434055]
+script = ExtResource("1_70mii")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114778241]
+material = SubResource("CanvasItemMaterial_vp2j4")
+position = Vector2(50, 50)
+scale = Vector2(-0.773, 0.775)
+texture = ExtResource("2_pc44i")
+
+[node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476]
+script = ExtResource("2_70mii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=87730703]
+position = Vector2(50, 50.5)
+shape = SubResource("RectangleShape2D_ww4r6")
+
+[connection signal="input_event" from="ClickableRegion" to="ClickableRegion" method="_on_input_event"]
+[connection signal="mouse_entered" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_exited"]

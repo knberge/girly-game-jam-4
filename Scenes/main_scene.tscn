@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvmykml6cevwk"]
 
-[ext_resource type="PackedScene" uid="uid://kdj1ccgbbdjt" path="res://Scenes/work_table.tscn" id="1_52fb6"]
+[ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 
-[node name="WorkTable" parent="." unique_id=1634376870 instance=ExtResource("1_52fb6")]
+[node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]
