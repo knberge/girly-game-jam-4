@@ -6,6 +6,7 @@
 
 [node name="Ingredient0" parent="." unique_id=209434055 instance=ExtResource("1_ojhjg")]
 position = Vector2(50, 50)
+id = 0
 
 [node name="Ingredient1" parent="." unique_id=1514770288 instance=ExtResource("1_ojhjg")]
 position = Vector2(202, 48)
