@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://b1ru6cy7wciq2"]
 
-[ext_resource type="PackedScene" uid="uid://b7abymtnnufh4" path="res://Scenes/DraggableRect.tscn" id="1_byaif"]
+[ext_resource type="PackedScene" uid="uid://frb1tfnktgbr" path="res://Scenes/ingredient.tscn" id="1_ojhjg"]
 
 [node name="IngredientStation" type="Node2D" unique_id=864927845]
 
-[node name="DraggableRect" parent="." unique_id=1516638363 instance=ExtResource("1_byaif")]
+[node name="Ingredient0" parent="." unique_id=209434055 instance=ExtResource("1_ojhjg")]
+position = Vector2(50, 50)
+id = 0
 
-[node name="DraggableRect2" parent="." unique_id=287381712 instance=ExtResource("1_byaif")]
-position = Vector2(150, 0)
+[node name="Ingredient1" parent="." unique_id=1514770288 instance=ExtResource("1_ojhjg")]
+position = Vector2(202, 48)
+id = 1
 
-[node name="DraggableRect3" parent="." unique_id=1891256176 instance=ExtResource("1_byaif")]
-position = Vector2(300, 0)
+[node name="Ingredient2" parent="." unique_id=577880623 instance=ExtResource("1_ojhjg")]
+position = Vector2(350, 50)
+id = 2
