@@ -1,5 +1,7 @@
 extends Area2D
 #class_name AssemblyArea
+
+@onready var recipe_builder: RecipeBuilder = $RecipeBuilder
 	
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -8,6 +10,6 @@ func _input(event):
 
 func check_overlapping_areas():
 	for area in get_overlapping_areas():
-		if area.is_in_group("ingredient"):
-			print("THIS OVERLAPPING AREA IS INGREDIENT");
-			# add ingredient to current recipe/result
+		if area.get_parent().is_in_group("ingredient"):
+			recipe_builder.add_ingredient(area.get_parent())
+			

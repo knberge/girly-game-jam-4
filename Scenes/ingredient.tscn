@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ww4r6"]
 size = Vector2(100, 101)
 
-[node name="Ingredient" type="Node2D" unique_id=209434055]
+[node name="Ingredient" type="Node2D" unique_id=209434055 groups=["ingredient"]]
 script = ExtResource("1_70mii")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114778241]
@@ -18,7 +18,7 @@ position = Vector2(50, 50)
 scale = Vector2(-0.773, 0.775)
 texture = ExtResource("2_pc44i")
 
-[node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476 groups=["ingredient"]]
+[node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476]
 script = ExtResource("2_70mii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=87730703]
