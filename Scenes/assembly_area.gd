@@ -8,4 +8,6 @@ func _input(event):
 
 func check_overlapping_areas():
 	for area in get_overlapping_areas():
-		print("Overlapping area: ", area.name)
+		if area.is_in_group("ingredient"):
+			print("THIS OVERLAPPING AREA IS INGREDIENT");
+			# add ingredient to current recipe/result

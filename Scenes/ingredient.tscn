@@ -18,7 +18,7 @@ position = Vector2(50, 50)
 scale = Vector2(-0.773, 0.775)
 texture = ExtResource("2_pc44i")
 
-[node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476]
+[node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476 groups=["ingredient"]]
 script = ExtResource("2_70mii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=87730703]
