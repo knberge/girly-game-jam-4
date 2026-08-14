@@ -7,11 +7,14 @@
 [node name="Ingredient0" parent="." unique_id=209434055 instance=ExtResource("1_ojhjg")]
 position = Vector2(50, 50)
 id = 0
+title = "Yogurt"
 
 [node name="Ingredient1" parent="." unique_id=1514770288 instance=ExtResource("1_ojhjg")]
 position = Vector2(202, 48)
 id = 1
+title = "Granola"
 
 [node name="Ingredient2" parent="." unique_id=577880623 instance=ExtResource("1_ojhjg")]
 position = Vector2(350, 50)
 id = 2
+title = "Blueberries"
