@@ -12,10 +12,18 @@ size = Vector2(100, 101)
 [node name="Ingredient" type="Node2D" unique_id=209434055 groups=["ingredient"]]
 script = ExtResource("1_70mii")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114778241]
+[node name="DraggableSprite" type="Sprite2D" parent="." unique_id=1114778241]
 material = SubResource("CanvasItemMaterial_vp2j4")
 position = Vector2(50, 50)
 scale = Vector2(-0.773, 0.775)
+texture = ExtResource("2_pc44i")
+
+[node name="InRecipeSprite" type="Sprite2D" parent="." unique_id=131314947]
+visible = false
+modulate = Color(2.8896093, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_vp2j4")
+position = Vector2(50, 50)
+scale = Vector2(-0.773, 0.33499998)
 texture = ExtResource("2_pc44i")
 
 [node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476]
