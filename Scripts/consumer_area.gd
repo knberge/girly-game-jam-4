@@ -13,4 +13,3 @@ func check_overlapping_areas():
 		var parent = area.get_parent()
 		if parent is Draggable:
 			consumer.consume(parent)
-			

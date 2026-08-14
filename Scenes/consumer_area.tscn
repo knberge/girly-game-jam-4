@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bis6x315amtt2"]
 
-[ext_resource type="Script" uid="uid://2vk3k113yti1" path="res://Scripts/assembly_area.gd" id="1_y45kb"]
+[ext_resource type="Script" uid="uid://2vk3k113yti1" path="res://Scripts/consumer_area.gd" id="1_y45kb"]
 [ext_resource type="PackedScene" uid="uid://cnerj3p7tqwwx" path="res://Scenes/recipe_builder.tscn" id="2_olhmd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_efp7l"]
@@ -8,7 +8,7 @@ size = Vector2(100, 200)
 
 [sub_resource type="BoxMesh" id="BoxMesh_olhmd"]
 
-[node name="AssemblyArea" type="Area2D" unique_id=1015795378]
+[node name="ConsumerArea" type="Area2D" unique_id=1015795378]
 script = ExtResource("1_y45kb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=958298066]
