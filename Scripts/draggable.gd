@@ -6,6 +6,24 @@ class_name Draggable
 
 var block_drag := false
 
+func drop_on_nothing():
+	print("No area encountered. Deleting")
+
 func _process(_delta: float) -> void:
 	if not block_drag and clickable_region.clicked:
 		position = get_global_mouse_position() - clickable_region.offset
+
+func _input(event):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.is_released() and clickable_region.clicked and not block_drag:
+			check_overlapping_areas()
+
+func check_overlapping_areas():
+	var encountered_area = false
+	for area in clickable_region.get_overlapping_areas():
+		if area is ConsumerArea:
+			area.consume.emit(self)
+			encountered_area = true
+			break
+	if not encountered_area:
+		drop_on_nothing()

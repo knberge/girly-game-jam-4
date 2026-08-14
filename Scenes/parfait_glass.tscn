@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cf7qqmf4xn06s"]
+
+[ext_resource type="Script" uid="uid://dcgtrhr7ku524" path="res://Scripts/parfait_glass.gd" id="1_104l6"]
+[ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_hqcym"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_104l6"]
+
+[node name="ParfaitGlass" type="Node2D" unique_id=782703709]
+script = ExtResource("1_104l6")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=177638839]
+position = Vector2(50, 100)
+scale = Vector2(100, 200)
+mesh = SubResource("BoxMesh_104l6")
+
+[node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_hqcym")]
