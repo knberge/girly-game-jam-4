@@ -12,7 +12,7 @@ func _on_consume(draggable: Draggable):
 		add_ingredient(draggable)
 	else:
 		if is_instance_valid(draggable):
-			draggable.queue_free()
+			draggable.drop_bad()
 
 func add_ingredient(ingr: Ingredient):
 	added_ingredients.append(ingr)

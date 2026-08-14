@@ -6,8 +6,13 @@ class_name Draggable
 
 var block_drag := false
 
+func drop_bad():
+	print("deleting")
+	queue_free()
+
 func drop_on_nothing():
-	print("No area encountered. Deleting")
+	print("No area encountered")
+	drop_bad()
 
 func _process(_delta: float) -> void:
 	if not block_drag and clickable_region.clicked:
