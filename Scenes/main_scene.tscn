@@ -2,8 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
 [ext_resource type="PackedScene" uid="uid://cf7qqmf4xn06s" path="res://Scenes/parfait_glass.tscn" id="3_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://cnnpapmi73mmd" path="res://Scenes/patron.tscn" id="3_x6ack"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
+
+[node name="Patron" parent="." unique_id=758867252 instance=ExtResource("3_x6ack")]
+position = Vector2(319, 395)
 
 [node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
 position = Vector2(810, 320)

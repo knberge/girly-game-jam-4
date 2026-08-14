@@ -7,12 +7,12 @@ class_name Draggable
 var block_drag := false
 
 func drop_bad():
-	print("deleting")
+	print("Bad drop. deleting")
 	queue_free()
 
 func drop_on_nothing():
-	print("No area encountered")
-	drop_bad()
+	print("No area encountered. deleting")
+	queue_free()
 
 func _process(_delta: float) -> void:
 	if not block_drag and clickable_region.clicked:
@@ -27,8 +27,8 @@ func check_overlapping_areas():
 	var encountered_area = false
 	for area in clickable_region.get_overlapping_areas():
 		if area is ConsumerArea:
+			print("found consumer:", area)
 			area.consume.emit(self)
 			encountered_area = true
-			break
 	if not encountered_area:
 		drop_on_nothing()

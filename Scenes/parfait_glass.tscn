@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dcgtrhr7ku524" path="res://Scripts/parfait_glass.gd" id="1_104l6"]
 [ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_hqcym"]
+[ext_resource type="Script" uid="uid://dhq2gphp35u6n" path="res://Scripts/clickable_region.gd" id="3_hqcym"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_104l6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2xff"]
+size = Vector2(100, 101)
 
 [node name="ParfaitGlass" type="Node2D" unique_id=782703709]
 script = ExtResource("1_104l6")
@@ -14,3 +18,14 @@ scale = Vector2(100, 200)
 mesh = SubResource("BoxMesh_104l6")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_hqcym")]
+
+[node name="ClickableRegion" type="Area2D" parent="." unique_id=1977433747]
+script = ExtResource("3_hqcym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=1678702483]
+position = Vector2(50, 50.5)
+shape = SubResource("RectangleShape2D_a2xff")
+
+[connection signal="input_event" from="ClickableRegion" to="ClickableRegion" method="_on_input_event"]
+[connection signal="mouse_entered" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_exited"]
