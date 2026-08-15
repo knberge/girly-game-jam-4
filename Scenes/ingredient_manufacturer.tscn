@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c4qnmcmk7u7kq"]
+
+[ext_resource type="PackedScene" uid="uid://b71bknvt03cp5" path="res://Scenes/TestAndTemp/base_manufacturer.tscn" id="1_m0evp"]
+
+[node name="IngredientManufacturer" unique_id=1666591721 instance=ExtResource("1_m0evp")]
+scene_path = "res://Scenes/ingredient.tscn"

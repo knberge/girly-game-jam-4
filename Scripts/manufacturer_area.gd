@@ -1,7 +1,7 @@
 extends Area2D
 class_name ManufacturerArea
 
-const scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
+@export var scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
 var obj_scene: Variant
 
 #signal manufacture(draggable: Draggable)
@@ -11,7 +11,8 @@ var obj_scene: Variant
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	obj_scene = preload(scene_path)
+	# TODO: add some check to make sure scene path is valid
+	obj_scene = load(scene_path) # load so that scene_path can be dynamic
 	spawn()
 
 func spawn():
