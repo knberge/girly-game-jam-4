@@ -4,9 +4,7 @@ extends Node2D
 @onready var sprite = $Patron1
 @onready var speechBubble = $Speech
 
-@export var images : Array[String] = [
-	"res://Sprites/patron_glutton.png"
-]
+@export var hell_layer : HellLayerData
 
 enum State {UNINITIALIZED, ENTERING, WAITING, EXITING}
 @onready var state : State = State.UNINITIALIZED
@@ -17,9 +15,9 @@ var start_time : float
 var stop : Vector2
 var leave : Vector2
 
-func initialize(layer: int, stop_: Vector2, leave_: Vector2) -> void:
-	assert(layer < len(images))
-	sprite.texture = load(images[layer])
+func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> void:
+	sprite.texture = load(hell_layer_.patron_sprite)
+	hell_layer = hell_layer_
 	state = State.ENTERING
 	stop = stop_
 	leave = leave_
