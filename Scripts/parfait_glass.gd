@@ -17,6 +17,7 @@ func _ready() -> void:
 
 func _on_consume(draggable: Draggable):
 	if draggable == self:
+		draggable.drop_bad()
 		return
 
 	print("consuming", draggable.get_parent().get_parent())
