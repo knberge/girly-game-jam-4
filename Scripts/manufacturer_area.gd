@@ -1,7 +1,7 @@
 extends Area2D
 class_name ManufacturerArea
 
-const scene_path = "res://Scenes/draggable_rect.tscn" # placeholder image for base class
+const scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
 var obj_scene: Variant
 
 #signal manufacture(draggable: Draggable)
