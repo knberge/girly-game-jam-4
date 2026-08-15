@@ -41,14 +41,14 @@ func _on_consume(draggable: Draggable):
 	if state != State.WAITING:
 		draggable.drop_bad()
 		return
-
-	print("consuming ", draggable.name)
 	if draggable is ParfaitGlass:
 		rate_glass(draggable)
 	else:
 		draggable.drop_bad()
 
 func rate_glass(glass: ParfaitGlass):
+	if glass.is_empty():
+		return
 	print("thanks for the parfait")
 	glass.drop_good()
 	start_exiting()
