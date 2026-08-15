@@ -7,7 +7,7 @@ func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
 
 func _on_consume(draggable: Draggable):
-	print("consuming", draggable.get_parent().get_parent())
+	print("consuming ", draggable.name)
 	if draggable is ParfaitGlass:
 		rate_glass(draggable)
 	else:

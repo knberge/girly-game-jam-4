@@ -26,8 +26,8 @@ func _input(event):
 func check_overlapping_areas():
 	var encountered_area = false
 	for area in clickable_region.get_overlapping_areas():
-		if area is ConsumerArea:
-			area.consume.emit(self)
+		if area is ConsumerArea and area.get_parent() != self: # TODO: reinvestigate best practice
+			area.trigger_consume(self)
 			encountered_area = true
 	if not encountered_area:
 		drop_on_nothing()
