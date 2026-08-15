@@ -1,17 +1,36 @@
 [gd_scene format=3 uid="uid://cvmykml6cevwk"]
 
+[ext_resource type="Texture2D" uid="uid://divlfw2d85wv" path="res://Sprites/background_back.png" id="1_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
+[ext_resource type="Texture2D" uid="uid://cq12ica03kkis" path="res://Sprites/background_counter.png" id="2_maf8m"]
+[ext_resource type="Texture2D" uid="uid://ctmkfdf4k0502" path="res://Sprites/background_fridge.png" id="3_huasi"]
 [ext_resource type="PackedScene" uid="uid://cf7qqmf4xn06s" path="res://Scenes/parfait_glass.tscn" id="3_jv6wh"]
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 
+[node name="Background" type="Node2D" parent="." unique_id=1341159298]
+position = Vector2(565, 320)
+
+[node name="BackgroundBack" type="Sprite2D" parent="Background" unique_id=240173383]
+texture = ExtResource("1_6ev3c")
+
+[node name="BackgroundCounter" type="Sprite2D" parent="Background" unique_id=378859154]
+z_index = 2
+texture = ExtResource("2_maf8m")
+
+[node name="BackgroundFridge" type="Sprite2D" parent="Background" unique_id=142306581]
+z_index = 2
+texture = ExtResource("3_huasi")
+
 [node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
+z_index = 3
 position = Vector2(810, 320)
 
 [node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]
 
 [node name="PatronSpawner" type="Node2D" parent="." unique_id=1975020334]
+z_index = 1
 position = Vector2(-66, 359)
 script = ExtResource("4_x6ack")
 
