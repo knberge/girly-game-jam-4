@@ -9,12 +9,12 @@ enum IngredientType {
 }
 
 @export var id : IngredientType = IngredientType.UNINITIALIZED
-@export var sprite : String = ""
+@export var texture_name : String = ""
 @export var layer_map : Array[int] = []
 
-func _init(id_ : IngredientType, sprite_: String, layer_map_: Array[int]):
+func _init(id_ : IngredientType, texture_name_: String, layer_map_: Array[int]):
 	id = id_
-	sprite = sprite_
+	texture_name = texture_name_
 	layer_map = layer_map_
 
 func _to_string() -> String:

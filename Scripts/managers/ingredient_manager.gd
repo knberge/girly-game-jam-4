@@ -6,15 +6,15 @@ var hell_layers: Array[HellLayerData] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ingredients = [
-		IngredientData.new(IngredientData.IngredientType.GRANOLA, "", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTRED, "", []),
-		IngredientData.new(IngredientData.IngredientType.CHOCOLATE, "", []),
-		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTBLUE, "", []),
-		IngredientData.new(IngredientData.IngredientType.ONION, "", []),
-		IngredientData.new(IngredientData.IngredientType.CHERRY, "", []),
-		IngredientData.new(IngredientData.IngredientType.BLOOD, "", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTGREEN, "", []),
+		IngredientData.new(IngredientData.IngredientType.GRANOLA, "res://Sprites/granola.png", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTRED, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.CHOCOLATE, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "res://Sprites/blueberry.png", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTBLUE, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.ONION, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.CHERRY, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.BLOOD, "res://icon.svg", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTGREEN, "res://icon.svg", []),
 	]
 	
 	hell_layers = [
