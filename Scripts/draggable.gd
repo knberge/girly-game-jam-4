@@ -41,4 +41,3 @@ func check_overlapping_areas():
 func destroy():
 	draggable_consumed_or_destroyed.emit()
 	queue_free()
-	

@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
 [ext_resource type="Texture2D" uid="uid://cq12ica03kkis" path="res://Sprites/background_counter.png" id="2_maf8m"]
 [ext_resource type="Texture2D" uid="uid://ctmkfdf4k0502" path="res://Sprites/background_fridge.png" id="3_huasi"]
-[ext_resource type="PackedScene" uid="uid://cf7qqmf4xn06s" path="res://Scenes/parfait_glass.tscn" id="3_jv6wh"]
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
+[ext_resource type="PackedScene" uid="uid://b71bknvt03cp5" path="res://Scenes/TestAndTemp/base_manufacturer.tscn" id="5_maf8m"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 texture_filter = 1
@@ -24,9 +24,10 @@ texture = ExtResource("2_maf8m")
 z_index = 2
 texture = ExtResource("3_huasi")
 
-[node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
+[node name="ParfaitGlassManufacturer" parent="." unique_id=1666591721 instance=ExtResource("5_maf8m")]
 z_index = 3
-position = Vector2(527, 186)
+position = Vector2(507, 180)
+scene_path = "res://Scenes/parfait_glass.tscn"
 
 [node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]
 z_index = 100
