@@ -9,11 +9,8 @@ class_name Ingredient
 
 # handle behavior when this ingredient is added to current recipe
 func use_ingredient():
-	block_drag = true
-	remove_from_group("ingredient")
-	# handle visuals
-	drag_sprite.visible = false
-	in_recipe_sprite.visible = true
+	print("used ingredient")
+	queue_free()
 	
 func _to_string() -> String:
 	return "Ingredient (Title: %s, ID: %d)" % [title, id]
