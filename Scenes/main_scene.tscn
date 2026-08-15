@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://cvmykml6cevwk"]
 
-[ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/assembly_area.tscn" id="1_6l7je"]
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
+[ext_resource type="PackedScene" uid="uid://cf7qqmf4xn06s" path="res://Scenes/parfait_glass.tscn" id="3_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://cnnpapmi73mmd" path="res://Scenes/patron.tscn" id="3_x6ack"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 
-[node name="AssemblyArea" parent="." unique_id=263710213 instance=ExtResource("1_6l7je")]
-position = Vector2(866, 349)
+[node name="Patron" parent="." unique_id=758867252 instance=ExtResource("3_x6ack")]
+position = Vector2(319, 395)
+
+[node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
+position = Vector2(810, 320)
 
 [node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]

@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cf7qqmf4xn06s"]
+
+[ext_resource type="Script" uid="uid://dcgtrhr7ku524" path="res://Scripts/parfait_glass.gd" id="1_104l6"]
+[ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_hqcym"]
+[ext_resource type="Script" uid="uid://dhq2gphp35u6n" path="res://Scripts/clickable_region.gd" id="3_hqcym"]
+[ext_resource type="Texture2D" uid="uid://dwhi3twidyykc" path="res://Sprites/parfait_glass.png" id="4_gxqqi"]
+[ext_resource type="Texture2D" uid="uid://cgb4k6dygyel" path="res://Sprites/layer1.png" id="5_onfpi"]
+[ext_resource type="Texture2D" uid="uid://cyjhingebdx8d" path="res://Sprites/layer2.png" id="6_xx56j"]
+[ext_resource type="Texture2D" uid="uid://grylx21tiug" path="res://Sprites/layer3.png" id="7_r7kkv"]
+[ext_resource type="Texture2D" uid="uid://dctc3ps5lbh8m" path="res://Sprites/layer4.png" id="8_0ulme"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a2xff"]
+size = Vector2(83, 137)
+
+[node name="ParfaitGlass" type="Node2D" unique_id=782703709]
+script = ExtResource("1_104l6")
+
+[node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_hqcym")]
+position = Vector2(-36, -64)
+scale = Vector2(0.7622234, 0.66597664)
+
+[node name="ClickableRegion" type="Area2D" parent="." unique_id=1977433747]
+script = ExtResource("3_hqcym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=1678702483]
+position = Vector2(1.5, 3.5)
+shape = SubResource("RectangleShape2D_a2xff")
+
+[node name="ParfaitGlassBottom" type="Sprite2D" parent="." unique_id=1221057153]
+texture = ExtResource("4_gxqqi")
+
+[node name="Layer1" type="Sprite2D" parent="." unique_id=1831863730]
+visible = false
+texture = ExtResource("5_onfpi")
+
+[node name="Layer2" type="Sprite2D" parent="." unique_id=1823699954]
+visible = false
+texture = ExtResource("6_xx56j")
+
+[node name="Layer3" type="Sprite2D" parent="." unique_id=1204100898]
+visible = false
+texture = ExtResource("7_r7kkv")
+
+[node name="Layer4" type="Sprite2D" parent="." unique_id=1783430614]
+visible = false
+texture = ExtResource("8_0ulme")
+
+[node name="ParfaitGlassTop" type="Sprite2D" parent="." unique_id=798951126]
+texture = ExtResource("4_gxqqi")
+
+[connection signal="input_event" from="ClickableRegion" to="ClickableRegion" method="_on_input_event"]
+[connection signal="mouse_entered" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_exited"]
