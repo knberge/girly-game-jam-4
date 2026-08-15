@@ -1,8 +1,11 @@
 extends Area2D
 class_name ManufacturerArea
 
+## String of path to scene you want to manufacture
 @export var scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
+## String of name of the objects to manufacture (currently only used for ingredients)
 @export var obj_name = ""
+
 var obj_scene: Variant
 
 #signal manufacture(draggable: Draggable)
