@@ -1,20 +1,17 @@
 [gd_scene format=3 uid="uid://b1ru6cy7wciq2"]
 
-[ext_resource type="PackedScene" uid="uid://frb1tfnktgbr" path="res://Scenes/ingredient.tscn" id="1_ojhjg"]
+[ext_resource type="PackedScene" uid="uid://c4qnmcmk7u7kq" path="res://Scenes/ingredient_manufacturer.tscn" id="2_ojhjg"]
 
 [node name="IngredientStation" type="Node2D" unique_id=864927845]
 
-[node name="Ingredient0" parent="." unique_id=209434055 instance=ExtResource("1_ojhjg")]
-position = Vector2(50, 50)
-id = 0
-title = "Yogurt"
+[node name="IngredientManufacturer1" parent="." unique_id=1666591721 instance=ExtResource("2_ojhjg")]
+position = Vector2(79, 101)
+obj_name = "Yogurt"
 
-[node name="Ingredient1" parent="." unique_id=1514770288 instance=ExtResource("1_ojhjg")]
-position = Vector2(202, 48)
-id = 1
-title = "Granola"
+[node name="IngredientManufacturer2" parent="." unique_id=1856715024 instance=ExtResource("2_ojhjg")]
+position = Vector2(246, 102)
+obj_name = "Blueberry"
 
-[node name="Ingredient2" parent="." unique_id=577880623 instance=ExtResource("1_ojhjg")]
-position = Vector2(350, 50)
-id = 2
-title = "Blueberries"
+[node name="IngredientManufacturer3" parent="." unique_id=463827362 instance=ExtResource("2_ojhjg")]
+position = Vector2(406, 104)
+obj_name = "Granola"

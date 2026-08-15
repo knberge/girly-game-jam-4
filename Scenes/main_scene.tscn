@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
 [ext_resource type="PackedScene" uid="uid://cf7qqmf4xn06s" path="res://Scenes/parfait_glass.tscn" id="3_jv6wh"]
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
-[ext_resource type="PackedScene" uid="uid://c4qnmcmk7u7kq" path="res://Scenes/ingredient_manufacturer.tscn" id="5_iacmt"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 texture_filter = 1
@@ -22,6 +21,3 @@ position = Vector2(490, -10)
 
 [node name="Leave" type="Marker2D" parent="PatronSpawner" unique_id=645653952]
 position = Vector2(-62, 0)
-
-[node name="IngredientManufacturer" parent="." unique_id=1305906286 instance=ExtResource("5_iacmt")]
-position = Vector2(413, 530)

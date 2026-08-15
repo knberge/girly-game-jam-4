@@ -4,6 +4,10 @@ class_name Ingredient
 @export var id := -1 
 @export var title := ""
 
+func initialize(given_title: String):
+	title = given_title
+	#TODO: system for setting IDs
+
 # handle behavior when this ingredient is added to current recipe
 func use_ingredient():
 	print("used ingredient ", title)

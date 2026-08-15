@@ -2,6 +2,7 @@ extends Area2D
 class_name ManufacturerArea
 
 @export var scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
+@export var obj_name = ""
 var obj_scene: Variant
 
 #signal manufacture(draggable: Draggable)
@@ -18,4 +19,5 @@ func _ready() -> void:
 func spawn():
 	var obj = obj_scene.instantiate()
 	add_child(obj)
-	#obj.initialize(0, stop.global_position, leave.global_position)
+	if obj is Ingredient:
+		obj.initialize(obj_name)
