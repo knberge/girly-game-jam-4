@@ -16,10 +16,11 @@ func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
 
 func _on_consume(draggable: Draggable):
-	print("consuming", draggable.get_parent().get_parent())
 	if draggable == self:
 		return
-	elif draggable is Ingredient:
+
+	print("consuming", draggable.get_parent().get_parent())
+	if draggable is Ingredient:
 		add_ingredient(draggable)
 	else:
 		draggable.drop_bad()

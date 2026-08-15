@@ -27,7 +27,6 @@ func check_overlapping_areas():
 	var encountered_area = false
 	for area in clickable_region.get_overlapping_areas():
 		if area is ConsumerArea:
-			print("found consumer:", area)
 			area.consume.emit(self)
 			encountered_area = true
 	if not encountered_area:
