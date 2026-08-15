@@ -18,7 +18,7 @@ texture = ExtResource("2_otyhr")
 [node name="Speech" type="Sprite2D" parent="." unique_id=751735938]
 visible = false
 texture_filter = 1
-position = Vector2(93, -203)
+position = Vector2(126, -155)
 texture = ExtResource("4_otyhr")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]

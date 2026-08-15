@@ -8,9 +8,10 @@
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
+texture_filter = 1
 
 [node name="Background" type="Node2D" parent="." unique_id=1341159298]
-position = Vector2(565, 320)
+position = Vector2(400, 225)
 
 [node name="BackgroundBack" type="Sprite2D" parent="Background" unique_id=240173383]
 texture = ExtResource("1_6ev3c")
@@ -25,17 +26,17 @@ texture = ExtResource("3_huasi")
 
 [node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
 z_index = 3
-position = Vector2(810, 320)
+position = Vector2(527, 186)
 
 [node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]
 
 [node name="PatronSpawner" type="Node2D" parent="." unique_id=1975020334]
 z_index = 1
-position = Vector2(-66, 359)
+position = Vector2(-307, 261.47)
 script = ExtResource("4_x6ack")
 
 [node name="Stop" type="Marker2D" parent="PatronSpawner" unique_id=1873424853]
-position = Vector2(490, -10)
+position = Vector2(490, 0)
 
 [node name="Leave" type="Marker2D" parent="PatronSpawner" unique_id=645653952]
-position = Vector2(-62, 0)
+position = Vector2(1215, 0)
