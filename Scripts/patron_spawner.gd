@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
 func spawn():
 	var patron = patron_scene.instantiate()
 	add_child(patron)
-	patron.initialize(IngredientManager.hell_layers[1], stop.global_position, leave.global_position)
+	patron.initialize(IngredientManager.random_hell_layer(), stop.global_position, leave.global_position)

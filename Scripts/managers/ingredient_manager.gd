@@ -13,3 +13,6 @@ func _ready() -> void:
 		HellLayerData.new(HellLayerData.Layer.LUST, "res://Sprites/patron_lust.png"),
 		HellLayerData.new(HellLayerData.Layer.GLUTTONY, "res://Sprites/patron_glutton.png"),
 	]
+
+func random_hell_layer() -> HellLayerData:
+	return hell_layers[randi() % len(hell_layers)]
