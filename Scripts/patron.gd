@@ -14,6 +14,7 @@ enum State {UNINITIALIZED, ENTERING, WAITING, EXITING}
 var start_time : float
 var stop : Vector2
 var leave : Vector2
+var requested_ingredients : Array[IngredientData]
 
 func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> void:
 	sprite.texture = load(hell_layer_.patron_sprite)
@@ -21,6 +22,7 @@ func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> 
 	state = State.ENTERING
 	stop = stop_
 	leave = leave_
+	requested_ingredients = IngredientManager.random_ingredients(4)
 
 func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
@@ -58,3 +60,4 @@ func start_exiting():
 func start_waiting():
 	state = State.WAITING
 	speechBubble.visible = true
+	print("I want ", requested_ingredients)

@@ -16,3 +16,7 @@ func _init(id_ : IngredientType, sprite_: String, layer_map_: Array[int]):
 	id = id_
 	sprite = sprite_
 	layer_map = layer_map_
+
+func _to_string() -> String:
+	print(IngredientType.keys()[id])
+	return "Ingredient (ID: %s)" % [IngredientType.keys()[id]]
