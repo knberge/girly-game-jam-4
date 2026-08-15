@@ -32,6 +32,10 @@ func _process(delta: float) -> void:
 		global_position = global_position.move_toward(stop, delta*move_speed)
 		if global_position == stop:
 			start_waiting()
+	elif state == State.EXITING:
+		global_position = global_position.move_toward(leave, delta*move_speed)
+		if global_position == leave:
+			queue_free()
 
 func _on_consume(draggable: Draggable):
 	if state != State.WAITING:
@@ -45,7 +49,13 @@ func _on_consume(draggable: Draggable):
 		draggable.drop_bad()
 
 func rate_glass(glass: ParfaitGlass):
-	print("got a parfait glass!")
+	print("thanks for the parfait")
+	glass.drop_good()
+	start_exiting()
+	
+func start_exiting():
+	speechBubble.visible = false
+	state = State.EXITING
 	
 func start_waiting():
 	state = State.WAITING

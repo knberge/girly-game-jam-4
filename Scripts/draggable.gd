@@ -6,6 +6,10 @@ class_name Draggable
 
 var block_drag := false
 
+func drop_good():
+	print("good drop. deleting anyways mwahahaha")
+	queue_free()
+
 func drop_bad():
 	print("Bad drop. deleting")
 	queue_free()
