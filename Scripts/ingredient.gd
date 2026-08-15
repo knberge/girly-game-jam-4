@@ -11,7 +11,7 @@ func initialize(given_title: String):
 # handle behavior when this ingredient is added to current recipe
 func use_ingredient():
 	print("used ingredient ", title)
-	queue_free()
+	destroy()
 	
 func _to_string() -> String:
 	return "Ingredient (Title: %s, ID: %d)" % [title, id]

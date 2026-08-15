@@ -8,11 +8,6 @@ class_name ManufacturerArea
 
 var obj_scene: Variant
 
-#signal manufacture(draggable: Draggable)
-
-#func trigger_manufacture(draggable: Draggable):
-	#manufacture.emit(draggable)
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# TODO: add some check to make sure scene path is valid
@@ -24,3 +19,4 @@ func spawn():
 	add_child(obj)
 	if obj is Ingredient:
 		obj.initialize(obj_name)
+		obj.draggable_consumed_or_destroyed.connect(spawn)
