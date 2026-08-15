@@ -66,6 +66,14 @@ position = Vector2(-26, 18)
 [node name="Marker2D4" type="Marker2D" parent="Speech/Request4" unique_id=1671218603]
 position = Vector2(41, 8)
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Speech" unique_id=543825088]
+visible = false
+offset_left = -26.0
+offset_top = -25.0
+offset_right = 46.0
+offset_bottom = 5.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-105, -170)
 scale = Vector2(2.0999117, 1.6999995)

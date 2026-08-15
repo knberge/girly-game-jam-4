@@ -7,7 +7,9 @@ class_name PatronRequest
 	$Request3,
 	$Request4,
 ]
+@onready var rating_text: RichTextLabel = $RichTextLabel
 
+var request_sprites : Array[Sprite2D] = []
 
 func request(requested_ingredients: Array[IngredientData]):
 	visible = true
@@ -18,13 +20,21 @@ func request(requested_ingredients: Array[IngredientData]):
 		_create_ingredient_bubble(ingredient, loc)
 
 func rate(satisfaction: int):
-	visible = false
+	# clear old sprites
+	for sprite in request_sprites:
+		sprite.queue_free()
+	request_sprites = []
+	
+	# show rating
+	rating_text.visible = true
+	rating_text.text = str(satisfaction)
 
 func _create_ingredient_bubble(ingredient: IngredientData, loc: Vector2):
 	var sprite = Sprite2D.new()
 	add_child(sprite)
 	sprite.texture = load(ingredient.texture_name)
 	sprite.position = loc
+	request_sprites.append(sprite)
 
 func _get_locs(num: int) -> Array[Vector2]:
 	assert(num <= 4)
