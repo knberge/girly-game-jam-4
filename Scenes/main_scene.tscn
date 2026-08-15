@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cnnpapmi73mmd" path="res://Scenes/patron.tscn" id="3_x6ack"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
+texture_filter = 1
 
 [node name="Patron" parent="." unique_id=758867252 instance=ExtResource("3_x6ack")]
+z_index = -1
 position = Vector2(319, 395)
 
 [node name="ParfaitGlass" parent="." unique_id=782703709 instance=ExtResource("3_jv6wh")]
