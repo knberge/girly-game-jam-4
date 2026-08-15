@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b44t5renp8vs7"
-path="res://.godot/imported/patron1.jpg-37748e28cbfd9e8fef49a66ebb7cb64b.ctex"
+uid="uid://ci6lxhrh73qox"
+path="res://.godot/imported/patron_glutton.png-336994efc759d34512fae7d8cc4a2ce5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/patron1.jpg"
-dest_files=["res://.godot/imported/patron1.jpg-37748e28cbfd9e8fef49a66ebb7cb64b.ctex"]
+source_file="res://Sprites/patron_glutton.png"
+dest_files=["res://.godot/imported/patron_glutton.png-336994efc759d34512fae7d8cc4a2ce5.ctex"]
 
 [params]
 
