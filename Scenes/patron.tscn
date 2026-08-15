@@ -3,13 +3,23 @@
 [ext_resource type="Script" uid="uid://cg3pynnmmofra" path="res://Scripts/patron.gd" id="1_yxe66"]
 [ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_6xk4x"]
 [ext_resource type="Texture2D" uid="uid://ci6lxhrh73qox" path="res://Sprites/patron_glutton.png" id="2_otyhr"]
+[ext_resource type="Texture2D" uid="uid://8ugu3ni7ciqm" path="res://Sprites/speech.png" id="4_otyhr"]
 
 [node name="Patron" type="Node2D" unique_id=758867252]
+z_index = -1
 script = ExtResource("1_yxe66")
 
 [node name="Patron1" type="Sprite2D" parent="." unique_id=684743059]
+z_index = -1
+texture_filter = 1
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_otyhr")
+
+[node name="Speech" type="Sprite2D" parent="." unique_id=751735938]
+visible = false
+texture_filter = 1
+position = Vector2(-75, -187)
+texture = ExtResource("4_otyhr")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-105, -170)

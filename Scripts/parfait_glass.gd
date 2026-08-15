@@ -28,7 +28,6 @@ func _on_consume(draggable: Draggable):
 	if draggable == self:
 		draggable.drop_bad()
 		return
-	print("consuming ", draggable.name)
 	if draggable is Ingredient:
 		add_ingredient(draggable)
 	else:
@@ -41,3 +40,6 @@ func add_ingredient(ingr: Ingredient):
 		print("Added ingredients now is ", added_ingredients)
 		ingr.use_ingredient()
 		layerSprites[top_layer].visible = true
+
+func is_empty() -> bool:
+	return len(added_ingredients) == 0
