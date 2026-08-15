@@ -3,7 +3,6 @@ extends Node2D
 @onready var consumerArea = $ConsumerArea
 @onready var sprite = $Patron1
 @onready var speechBubble = $Speech
-@onready var request : PatronRequest = $Request
 
 @export var hell_layer : HellLayerData
 
@@ -16,6 +15,7 @@ var start_time : float
 var stop : Vector2
 var leave : Vector2
 var requested_ingredients : Array[IngredientData]
+var satisfaction : int
 
 func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> void:
 	sprite.texture = load(hell_layer_.patron_sprite)
@@ -51,25 +51,14 @@ func rate_glass(glass: ParfaitGlass):
 	if glass.is_empty():
 		return
 	print("thanks for the parfait")
+	satisfaction = 10
 	glass.drop_good()
+	speechBubble.rate(satisfaction)
 	start_exiting()
 
 func start_exiting():
-	speechBubble.visible = false
 	state = State.EXITING
-	
+
 func start_waiting():
 	state = State.WAITING
-	speechBubble.visible = true
-	
-	var locs = request.get_locs(len(requested_ingredients))
-	for i in len(requested_ingredients):
-		var ingredient = requested_ingredients[i]
-		var loc = locs[i]
-		var sprite = Sprite2D.new()
-		add_child(sprite)
-		sprite.texture = load(ingredient.texture_name)
-		sprite.position = loc
-		print(loc)
-		print(sprite.global_position)
-	print("I want ", requested_ingredients)
+	speechBubble.request(requested_ingredients)

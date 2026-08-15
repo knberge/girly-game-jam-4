@@ -22,52 +22,50 @@ visible = false
 texture_filter = 1
 position = Vector2(126, -155)
 texture = ExtResource("4_otyhr")
+script = ExtResource("5_p88rn")
+
+[node name="Request1" type="Node2D" parent="Speech" unique_id=561610456]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request1" unique_id=614455906]
+position = Vector2(5, -10)
+
+[node name="Request2" type="Node2D" parent="Speech" unique_id=1615550178]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request2" unique_id=997810291]
+position = Vector2(-38, -10)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request2" unique_id=1769933951]
+position = Vector2(45, -10)
+
+[node name="Request3" type="Node2D" parent="Speech" unique_id=1803145015]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request3" unique_id=1249614617]
+position = Vector2(5, -44)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request3" unique_id=1976739802]
+position = Vector2(-38, 13)
+
+[node name="Marker2D3" type="Marker2D" parent="Speech/Request3" unique_id=31182473]
+position = Vector2(45, 13)
+
+[node name="Request4" type="Node2D" parent="Speech" unique_id=1833422283]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request4" unique_id=686907402]
+position = Vector2(-38, -35)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request4" unique_id=145399066]
+position = Vector2(41, -44)
+
+[node name="Marker2D3" type="Marker2D" parent="Speech/Request4" unique_id=1332533688]
+position = Vector2(-26, 18)
+
+[node name="Marker2D4" type="Marker2D" parent="Speech/Request4" unique_id=1671218603]
+position = Vector2(41, 8)
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-105, -170)
 scale = Vector2(2.0999117, 1.6999995)
-
-[node name="Request" type="Node2D" parent="." unique_id=729689003]
-script = ExtResource("5_p88rn")
-
-[node name="Request1" type="Node2D" parent="Request" unique_id=561610456]
-script = ExtResource("5_8ayes")
-
-[node name="Marker2D" type="Marker2D" parent="Request/Request1" unique_id=614455906]
-position = Vector2(128, -166)
-
-[node name="Request2" type="Node2D" parent="Request" unique_id=1615550178]
-script = ExtResource("5_8ayes")
-
-[node name="Marker2D" type="Marker2D" parent="Request/Request2" unique_id=997810291]
-position = Vector2(85, -166)
-
-[node name="Marker2D2" type="Marker2D" parent="Request/Request2" unique_id=1769933951]
-position = Vector2(168, -166)
-
-[node name="Request3" type="Node2D" parent="Request" unique_id=1803145015]
-script = ExtResource("5_8ayes")
-
-[node name="Marker2D" type="Marker2D" parent="Request/Request3" unique_id=1249614617]
-position = Vector2(128, -200)
-
-[node name="Marker2D2" type="Marker2D" parent="Request/Request3" unique_id=1976739802]
-position = Vector2(85, -143)
-
-[node name="Marker2D3" type="Marker2D" parent="Request/Request3" unique_id=31182473]
-position = Vector2(168, -143)
-
-[node name="Request4" type="Node2D" parent="Request" unique_id=1833422283]
-script = ExtResource("5_8ayes")
-
-[node name="Marker2D" type="Marker2D" parent="Request/Request4" unique_id=686907402]
-position = Vector2(85, -191)
-
-[node name="Marker2D2" type="Marker2D" parent="Request/Request4" unique_id=145399066]
-position = Vector2(164, -200)
-
-[node name="Marker2D3" type="Marker2D" parent="Request/Request4" unique_id=1332533688]
-position = Vector2(97, -138)
-
-[node name="Marker2D4" type="Marker2D" parent="Request/Request4" unique_id=1671218603]
-position = Vector2(164, -148)
