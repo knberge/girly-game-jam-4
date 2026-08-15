@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	elif state == State.EXITING:
 		global_position = global_position.move_toward(leave, delta*move_speed)
 		if global_position == leave:
-			queue_free()
+			finish_exiting()
 
 func _on_consume(draggable: Draggable):
 	if state != State.WAITING:
@@ -62,3 +62,6 @@ func start_exiting():
 func start_waiting():
 	state = State.WAITING
 	speechBubble.request(requested_ingredients)
+
+func finish_exiting():
+	queue_free()
