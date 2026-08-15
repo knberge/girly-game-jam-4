@@ -15,11 +15,11 @@ var added_ingredients := []
 
 # override to prevent deleting the glass
 func drop_bad():
-	print("bad drop")
+	print("bad drop: glass")
 
 # override to prevent deleting the glass
 func drop_on_nothing():
-	print("No area encountered")
+	print("No area encountered: glass")
 
 func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
@@ -28,8 +28,7 @@ func _on_consume(draggable: Draggable):
 	if draggable == self:
 		draggable.drop_bad()
 		return
-
-	print("consuming", draggable.get_parent().get_parent())
+	print("consuming ", draggable.name)
 	if draggable is Ingredient:
 		add_ingredient(draggable)
 	else:
