@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://8ugu3ni7ciqm" path="res://Sprites/speech.png" id="4_otyhr"]
 
 [node name="Patron" type="Node2D" unique_id=758867252]
-z_index = -1
+z_index = 1
 script = ExtResource("1_yxe66")
 
 [node name="Patron1" type="Sprite2D" parent="." unique_id=684743059]
@@ -18,7 +18,7 @@ texture = ExtResource("2_otyhr")
 [node name="Speech" type="Sprite2D" parent="." unique_id=751735938]
 visible = false
 texture_filter = 1
-position = Vector2(-75, -187)
+position = Vector2(126, -155)
 texture = ExtResource("4_otyhr")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
