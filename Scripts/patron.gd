@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var consumerArea = $ConsumerArea
 @onready var sprite = $Patron1
+@onready var speechBubble = $Speech
 
 @export var images : Array[String] = [
 	"res://Sprites/patron_glutton.png"
@@ -30,7 +31,7 @@ func _process(delta: float) -> void:
 	if state == State.ENTERING:
 		global_position = global_position.move_toward(stop, delta*move_speed)
 		if global_position == stop:
-			state = State.WAITING
+			start_waiting()
 
 func _on_consume(draggable: Draggable):
 	if state != State.WAITING:
@@ -45,3 +46,7 @@ func _on_consume(draggable: Draggable):
 
 func rate_glass(glass: ParfaitGlass):
 	print("got a parfait glass!")
+	
+func start_waiting():
+	state = State.WAITING
+	speechBubble.visible = true
