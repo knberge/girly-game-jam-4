@@ -50,7 +50,6 @@ func _on_consume(draggable: Draggable):
 func rate_glass(glass: ParfaitGlass):
 	if glass.is_empty():
 		return
-	print("thanks for the parfait")
 	satisfaction = 10
 	glass.drop_good()
 	speechBubble.rate(satisfaction)
