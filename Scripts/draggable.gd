@@ -20,7 +20,7 @@ func drop_on_nothing():
 
 func _process(_delta: float) -> void:
 	if not block_drag and clickable_region.clicked:
-		position = get_global_mouse_position() - clickable_region.offset
+		global_position = get_global_mouse_position() - clickable_region.offset
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
