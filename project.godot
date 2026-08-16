@@ -19,14 +19,15 @@ run/main_scene="uid://cvmykml6cevwk"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+IngredientManager="*uid://dcfk0ny5h1d6c"
+
 [display]
 
 window/size/viewport_width=800
 window/size/viewport_height=450
-
-[autoload]
-
-IngredientManager="*uid://dcfk0ny5h1d6c"
+window/stretch/mode="canvas_items"
 
 [rendering]
 
