@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b71bknvt03cp5"]
+
+[ext_resource type="Script" uid="uid://chanv7klf2ifk" path="res://Scripts/manufacturer_area.gd" id="1_dyome"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0evp"]
+
+[node name="TempBaseManufacturer" type="Area2D" unique_id=1666591721]
+script = ExtResource("1_dyome")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2065630691]
+shape = SubResource("RectangleShape2D_m0evp")

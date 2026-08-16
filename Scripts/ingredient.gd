@@ -4,13 +4,14 @@ class_name Ingredient
 @export var id := -1 
 @export var title := ""
 
-@onready var drag_sprite: Sprite2D = $DraggableSprite
-@onready var in_recipe_sprite: Sprite2D = $InRecipeSprite
+func initialize(given_title: String):
+	title = given_title
+	#TODO: system for setting IDs
 
 # handle behavior when this ingredient is added to current recipe
 func use_ingredient():
-	print("used ingredient")
-	queue_free()
+	print("used ingredient ", title)
+	destroy()
 	
 func _to_string() -> String:
 	return "Ingredient (Title: %s, ID: %d)" % [title, id]

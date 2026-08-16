@@ -4,23 +4,25 @@ class_name Draggable
 # make sure clickable region is child node of Draggable elements
 @onready var clickable_region: ClickableRegion = $ClickableRegion
 
+signal draggable_consumed_or_destroyed()
+
 var block_drag := false
 
 func drop_good():
 	print("good drop. deleting anyways mwahahaha")
-	queue_free()
+	destroy()
 
 func drop_bad():
 	print("Bad drop. deleting")
-	queue_free()
+	destroy()
 
 func drop_on_nothing():
 	print("No area encountered. deleting")
-	queue_free()
+	destroy()
 
 func _process(_delta: float) -> void:
 	if not block_drag and clickable_region.clicked:
-		position = get_global_mouse_position() - clickable_region.offset
+		global_position = get_global_mouse_position() - clickable_region.offset
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -35,3 +37,7 @@ func check_overlapping_areas():
 			encountered_area = true
 	if not encountered_area:
 		drop_on_nothing()
+		
+func destroy():
+	draggable_consumed_or_destroyed.emit()
+	queue_free()
