@@ -27,10 +27,7 @@ func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
 
 func _on_consume(draggable: Draggable):
-	if draggable == self:
-		draggable.drop_bad()
-		return
-	if draggable is Ingredient:
+	if draggable is Ingredient and draggable != self: # self check might not be neccessary anymore
 		add_ingredient(draggable)
 	else:
 		draggable.drop_bad()
