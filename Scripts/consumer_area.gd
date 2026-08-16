@@ -1,7 +1,10 @@
 extends Area2D
 class_name ConsumerArea
 
+var block_consume := false
+
 signal consume(draggable: Draggable)
 
 func trigger_consume(draggable: Draggable):
-	consume.emit(draggable)
+	if not block_consume:
+		consume.emit(draggable)
