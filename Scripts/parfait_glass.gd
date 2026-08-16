@@ -13,16 +13,15 @@ class_name ParfaitGlass
 
 var added_ingredient_count: int = 0
 
-# TODO: add back in when ready to code glass snapping into place
-# override to prevent deleting the glass
-#func drop_bad():
-	#print("bad drop: glass")
-	#return_to_spawn_point()
-#
-# override to prevent deleting the glass
-#func drop_on_nothing():
-	#print("No area encountered: glass")
-	#return_to_spawn_point()
+# override to snap back instead of deleting the glass
+func drop_bad():
+	print("bad drop: glass")
+	return_to_spawn_point()
+
+# override to snap back instead of deleting the glass
+func drop_on_nothing():
+	print("No area encountered: glass")
+	return_to_spawn_point()
 
 func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
