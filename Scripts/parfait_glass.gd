@@ -41,6 +41,10 @@ func add_ingredient(ingr: Ingredient):
 		added_ingredient_count += 1
 		ingr.use_ingredient()
 		layerSprites[top_layer].visible = true
+		layerSprites[top_layer].get_material().set_shader_parameter(
+			"tile",
+			load(ingr.data.parfait_texture_name)
+		)
 	else: # glass is full
 		ingr.drop_bad()
 
