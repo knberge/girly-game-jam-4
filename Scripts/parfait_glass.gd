@@ -41,6 +41,8 @@ func add_ingredient(ingr: Ingredient):
 		added_ingredient_count += 1
 		ingr.use_ingredient()
 		layerSprites[top_layer].visible = true
+	else: # glass is full
+		ingr.drop_bad()
 
 func is_empty() -> bool:
 	return added_ingredient_count == 0
