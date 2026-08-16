@@ -6,12 +6,9 @@
 
 [node name="IngredientManufacturer1" parent="." unique_id=1666591721 instance=ExtResource("2_ojhjg")]
 position = Vector2(10, 10)
-obj_name = "Yogurt"
 
 [node name="IngredientManufacturer2" parent="." unique_id=1856715024 instance=ExtResource("2_ojhjg")]
 position = Vector2(160, 10)
-obj_name = "Blueberry"
 
 [node name="IngredientManufacturer3" parent="." unique_id=463827362 instance=ExtResource("2_ojhjg")]
 position = Vector2(310, 10)
-obj_name = "Granola"

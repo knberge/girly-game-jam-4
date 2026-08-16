@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c4qnmcmk7u7kq"]
 
 [ext_resource type="PackedScene" uid="uid://b71bknvt03cp5" path="res://Scenes/TestAndTemp/base_manufacturer.tscn" id="1_m0evp"]
+[ext_resource type="Script" uid="uid://pldcpsr5phmj" path="res://Scripts/ingredient_manufacturer.gd" id="2_vilw3"]
 
 [node name="IngredientManufacturer" unique_id=1666591721 instance=ExtResource("1_m0evp")]
+script = ExtResource("2_vilw3")
+title = ""
 scene_path = "res://Scenes/ingredient.tscn"
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
