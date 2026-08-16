@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://8ugu3ni7ciqm" path="res://Sprites/speech.png" id="4_otyhr"]
 [ext_resource type="Script" uid="uid://c6odke6dt14gg" path="res://Scripts/patron_request_loc.gd" id="5_8ayes"]
 [ext_resource type="Script" uid="uid://c52i4nxlv5w06" path="res://Scripts/patron_request.gd" id="5_p88rn"]
-
-[sub_resource type="Theme" id="Theme_p88rn"]
-default_font_size = 26
+[ext_resource type="Texture2D" uid="uid://bcatb6opvexh4" path="res://Sprites/reaction_happy.png" id="6_se5q0"]
+[ext_resource type="Texture2D" uid="uid://36ohnia2ai8w" path="res://Sprites/reaction_neutral.png" id="7_16x1l"]
+[ext_resource type="Texture2D" uid="uid://dfbvq1mm05rvc" path="res://Sprites/reaction_unhappy.png" id="8_wtysc"]
 
 [node name="Patron" type="Node2D" unique_id=758867252]
 z_index = 1
@@ -68,16 +68,20 @@ position = Vector2(-26, 18)
 [node name="Marker2D4" type="Marker2D" parent="Speech/Request4" unique_id=1671218603]
 position = Vector2(41, 8)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Speech" unique_id=543825088]
+[node name="ReactionHappy" type="Sprite2D" parent="Speech" unique_id=1446136991]
 visible = false
-offset_left = -39.0
-offset_top = -45.0
-offset_right = 46.0
-offset_bottom = 19.0
-theme = SubResource("Theme_p88rn")
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
-vertical_alignment = 1
+position = Vector2(2.5, -9.5)
+texture = ExtResource("6_se5q0")
+
+[node name="ReactionNeutral" type="Sprite2D" parent="Speech" unique_id=440896610]
+visible = false
+position = Vector2(2.5, -9.5)
+texture = ExtResource("7_16x1l")
+
+[node name="ReactionUnhappy" type="Sprite2D" parent="Speech" unique_id=1047788970]
+visible = false
+position = Vector2(2.5, -9.5)
+texture = ExtResource("8_wtysc")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-96, -170)

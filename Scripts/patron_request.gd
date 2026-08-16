@@ -7,7 +7,11 @@ class_name PatronRequest
 	$Request3,
 	$Request4,
 ]
-@onready var rating_text: RichTextLabel = $RichTextLabel
+@onready var reactions: Array[Sprite2D] = [
+	$ReactionUnhappy,
+	$ReactionNeutral,
+	$ReactionHappy,
+]
 
 var request_sprites: Array[Sprite2D] = []
 
@@ -26,8 +30,9 @@ func rate(satisfaction: int):
 	request_sprites = []
 	
 	# show rating
-	rating_text.visible = true
-	rating_text.text = str(satisfaction)
+	var rating_sprite_num = int((len(reactions)-1) * float(satisfaction)/4.0)
+	rating_sprite_num = min(rating_sprite_num, len(reactions)-1)
+	reactions[rating_sprite_num].visible = true
 
 func _create_ingredient_bubble(ingredient: IngredientData, loc: Vector2):
 	var sprite = Sprite2D.new()
