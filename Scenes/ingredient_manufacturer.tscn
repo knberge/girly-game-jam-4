@@ -5,7 +5,7 @@
 
 [node name="IngredientManufacturer" unique_id=1666591721 instance=ExtResource("1_m0evp")]
 script = ExtResource("2_vilw3")
-title = ""
+ingredient_type = 0
 scene_path = "res://Scenes/ingredient.tscn"
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

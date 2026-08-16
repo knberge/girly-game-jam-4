@@ -32,7 +32,7 @@ func rate(satisfaction: int):
 func _create_ingredient_bubble(ingredient: IngredientData, loc: Vector2):
 	var sprite = Sprite2D.new()
 	add_child(sprite)
-	sprite.texture = load(ingredient.texture_name)
+	sprite.texture = load(ingredient.speech_texture_name)
 	sprite.position = loc
 	request_sprites.append(sprite)
 
