@@ -3,6 +3,7 @@ class_name Draggable
 
 # make sure clickable region is child node of Draggable elements
 @onready var clickable_region: ClickableRegion = $ClickableRegion
+@onready var spawn_point := global_position
 
 signal draggable_consumed_or_destroyed()
 
@@ -28,6 +29,8 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.is_released() and clickable_region.clicked and not block_drag:
 			check_overlapping_areas()
+		if event.is_pressed():
+			clickable_region.on_mouse_press()
 
 func check_overlapping_areas():
 	var encountered_area = false
@@ -41,3 +44,7 @@ func check_overlapping_areas():
 func destroy():
 	draggable_consumed_or_destroyed.emit()
 	queue_free()
+
+func return_to_spawn_point():
+	clickable_region.clicked = false
+	global_position = spawn_point
