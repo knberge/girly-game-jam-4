@@ -11,7 +11,7 @@ class_name ParfaitGlass
 
 @export var max_layers: int = 4
 
-var added_ingredients := []
+var added_ingredient_count: int = 0
 
 # TODO: add back in when ready to code glass snapping into place
 # override to prevent deleting the glass
@@ -37,12 +37,11 @@ func _on_consume(draggable: Draggable):
 		draggable.drop_bad()
 
 func add_ingredient(ingr: Ingredient):
-	var top_layer = len(added_ingredients)
+	var top_layer = added_ingredient_count
 	if top_layer < max_layers:
-		added_ingredients.append(ingr)
-		print("Added ingredients now is ", added_ingredients)
+		added_ingredient_count += 1
 		ingr.use_ingredient()
 		layerSprites[top_layer].visible = true
 
 func is_empty() -> bool:
-	return len(added_ingredients) == 0
+	return added_ingredient_count == 0
