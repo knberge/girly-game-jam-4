@@ -15,3 +15,7 @@ ingredient_type = 4
 [node name="IngredientManufacturer3" parent="." unique_id=463827362 instance=ExtResource("2_ojhjg")]
 position = Vector2(310, 10)
 ingredient_type = 6
+
+[node name="IngredientManufacturer4" parent="." unique_id=331840399 instance=ExtResource("2_ojhjg")]
+position = Vector2(73, 13)
+ingredient_type = 1
