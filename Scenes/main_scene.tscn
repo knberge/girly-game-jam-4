@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ctmkfdf4k0502" path="res://Sprites/background_fridge.png" id="3_huasi"]
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://b71bknvt03cp5" path="res://Scenes/TestAndTemp/base_manufacturer.tscn" id="5_maf8m"]
+[ext_resource type="PackedScene" uid="uid://blle1bw85xi2j" path="res://Scenes/display_total.tscn" id="7_maf8m"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 texture_filter = 1
@@ -43,3 +44,7 @@ position = Vector2(490, 0)
 
 [node name="Leave" type="Marker2D" parent="PatronSpawner" unique_id=645653952]
 position = Vector2(1215, 0)
+
+[node name="DisplayTotal" parent="." unique_id=1098478553 instance=ExtResource("7_maf8m")]
+offset_left = 499.0
+offset_right = 800.0

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://blle1bw85xi2j"]
+
+[sub_resource type="Theme" id="Theme_4bsju"]
+default_font_size = 18
+
+[node name="DisplayTotal" type="RichTextLabel" unique_id=1098478553]
+z_index = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -261.0
+offset_bottom = 52.0
+grow_horizontal = 0
+theme = SubResource("Theme_4bsju")
+theme_override_colors/default_color = Color(0.9019608, 0.9137255, 0.87058824, 1)
+text = "Soul Energy Collected: 0"
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=55155355]
+z_index = -1
+layout_mode = 0
+offset_left = -19.0
+offset_top = -14.0
+offset_right = 315.0
+offset_bottom = 100.0
+color = Color(0.09411765, 0.11764706, 0.16862746, 1)
