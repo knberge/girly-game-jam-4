@@ -51,6 +51,7 @@ func _on_consume(draggable: Draggable):
 
 func rate_glass(glass: ParfaitGlass):
 	if glass.is_empty():
+		glass.drop_bad()
 		return
 	satisfaction = 10
 	glass.drop_good()
