@@ -12,4 +12,12 @@ func _ready() -> void:
 func spawn():
 	var patron = patron_scene.instantiate()
 	add_child(patron)
-	patron.initialize(0, stop.global_position, leave.global_position)
+	patron.initialize(
+		IngredientManager.random_hell_layer(),
+		stop.global_position,
+		leave.global_position
+	)
+	patron.exit.connect(_on_exit)
+	
+func _on_exit(satisfaction: int):
+	spawn()

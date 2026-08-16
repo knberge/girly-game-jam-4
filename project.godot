@@ -24,6 +24,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=800
 window/size/viewport_height=450
 
+[autoload]
+
+IngredientManager="*uid://dcfk0ny5h1d6c"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

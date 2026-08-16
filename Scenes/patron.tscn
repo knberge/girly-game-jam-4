@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_6xk4x"]
 [ext_resource type="Texture2D" uid="uid://ci6lxhrh73qox" path="res://Sprites/patron_glutton.png" id="2_otyhr"]
 [ext_resource type="Texture2D" uid="uid://8ugu3ni7ciqm" path="res://Sprites/speech.png" id="4_otyhr"]
+[ext_resource type="Script" uid="uid://c6odke6dt14gg" path="res://Scripts/patron_request_loc.gd" id="5_8ayes"]
+[ext_resource type="Script" uid="uid://c52i4nxlv5w06" path="res://Scripts/patron_request.gd" id="5_p88rn"]
 
 [node name="Patron" type="Node2D" unique_id=758867252]
 z_index = 1
@@ -20,6 +22,57 @@ visible = false
 texture_filter = 1
 position = Vector2(126, -155)
 texture = ExtResource("4_otyhr")
+script = ExtResource("5_p88rn")
+
+[node name="Request1" type="Node2D" parent="Speech" unique_id=561610456]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request1" unique_id=614455906]
+position = Vector2(5, -10)
+
+[node name="Request2" type="Node2D" parent="Speech" unique_id=1615550178]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request2" unique_id=997810291]
+position = Vector2(-38, -10)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request2" unique_id=1769933951]
+position = Vector2(45, -10)
+
+[node name="Request3" type="Node2D" parent="Speech" unique_id=1803145015]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request3" unique_id=1249614617]
+position = Vector2(5, -44)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request3" unique_id=1976739802]
+position = Vector2(-38, 13)
+
+[node name="Marker2D3" type="Marker2D" parent="Speech/Request3" unique_id=31182473]
+position = Vector2(45, 13)
+
+[node name="Request4" type="Node2D" parent="Speech" unique_id=1833422283]
+script = ExtResource("5_8ayes")
+
+[node name="Marker2D" type="Marker2D" parent="Speech/Request4" unique_id=686907402]
+position = Vector2(-38, -35)
+
+[node name="Marker2D2" type="Marker2D" parent="Speech/Request4" unique_id=145399066]
+position = Vector2(41, -44)
+
+[node name="Marker2D3" type="Marker2D" parent="Speech/Request4" unique_id=1332533688]
+position = Vector2(-26, 18)
+
+[node name="Marker2D4" type="Marker2D" parent="Speech/Request4" unique_id=1671218603]
+position = Vector2(41, 8)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Speech" unique_id=543825088]
+visible = false
+offset_left = -26.0
+offset_top = -25.0
+offset_right = 46.0
+offset_bottom = 5.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-105, -170)
