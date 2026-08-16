@@ -15,7 +15,6 @@ script = ExtResource("1_70mii")
 
 [node name="DraggableSprite" type="Sprite2D" parent="." unique_id=1114778241]
 material = SubResource("CanvasItemMaterial_vp2j4")
-position = Vector2(50, 50)
 scale = Vector2(-0.773, 0.775)
 texture = ExtResource("2_pc44i")
 
@@ -23,7 +22,6 @@ texture = ExtResource("2_pc44i")
 script = ExtResource("2_70mii")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableRegion" unique_id=87730703]
-position = Vector2(50, 50.5)
 shape = SubResource("RectangleShape2D_ww4r6")
 
 [connection signal="input_event" from="ClickableRegion" to="ClickableRegion" method="_on_input_event"]
