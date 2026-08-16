@@ -25,7 +25,7 @@ z_index = 2
 texture = ExtResource("2_maf8m")
 
 [node name="BackgroundFridge" type="Sprite2D" parent="Background" unique_id=142306581]
-z_index = 2
+z_index = 100
 texture = ExtResource("3_huasi")
 
 [node name="ParfaitGlassManufacturer" parent="." unique_id=1666591721 instance=ExtResource("5_maf8m")]
