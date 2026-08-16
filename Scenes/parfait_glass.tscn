@@ -4,15 +4,65 @@
 [ext_resource type="PackedScene" uid="uid://bis6x315amtt2" path="res://Scenes/consumer_area.tscn" id="2_hqcym"]
 [ext_resource type="Script" uid="uid://dhq2gphp35u6n" path="res://Scripts/clickable_region.gd" id="3_hqcym"]
 [ext_resource type="Texture2D" uid="uid://dwhi3twidyykc" path="res://Sprites/parfait_glass.png" id="4_gxqqi"]
-[ext_resource type="Texture2D" uid="uid://cgb4k6dygyel" path="res://Sprites/layer1.png" id="5_onfpi"]
-[ext_resource type="Texture2D" uid="uid://cyjhingebdx8d" path="res://Sprites/layer2.png" id="6_xx56j"]
-[ext_resource type="Texture2D" uid="uid://grylx21tiug" path="res://Sprites/layer3.png" id="7_r7kkv"]
-[ext_resource type="Texture2D" uid="uid://dctc3ps5lbh8m" path="res://Sprites/layer4.png" id="8_0ulme"]
+[ext_resource type="Shader" uid="uid://bxcyohqi5e5dy" path="res://Scenes/parfait_glass_fill.gdshader" id="5_85s1j"]
+[ext_resource type="Texture2D" uid="uid://cr5f10ok8u1u1" path="res://Sprites/parfait_glass_mask.png" id="6_gxqqi"]
+[ext_resource type="Texture2D" uid="uid://dq35q6c8e67uo" path="res://Sprites/blueberry_parfait.png" id="6_s07cj"]
+[ext_resource type="Texture2D" uid="uid://brob0c23h8j0l" path="res://Sprites/granola_parfait.png" id="7_gxqqi"]
+[ext_resource type="Texture2D" uid="uid://jkmufrqa1qxs" path="res://Sprites/parfait_glass_top.png" id="9_onfpi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2xff"]
 size = Vector2(83, 137)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onfpi"]
+shader = ExtResource("5_85s1j")
+shader_parameter/start_height = 0.0
+shader_parameter/end_height = 1.0
+shader_parameter/mask = ExtResource("6_gxqqi")
+shader_parameter/tile = ExtResource("6_s07cj")
+shader_parameter/tile_pixels = 32
+shader_parameter/mask_x = 68
+shader_parameter/freqs = PackedFloat32Array(0, 0, 0)
+shader_parameter/amp = 1.0
+shader_parameter/amps = PackedFloat32Array(0, 0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gxqqi"]
+shader = ExtResource("5_85s1j")
+shader_parameter/start_height = 0.0
+shader_parameter/end_height = 0.75
+shader_parameter/mask = ExtResource("6_gxqqi")
+shader_parameter/tile = ExtResource("7_gxqqi")
+shader_parameter/tile_pixels = 32
+shader_parameter/mask_x = 68
+shader_parameter/freqs = PackedFloat32Array(1, 2, 4)
+shader_parameter/amp = 1.0
+shader_parameter/amps = PackedFloat32Array(0.125, -0.01, 0.04)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s07cj"]
+shader = ExtResource("5_85s1j")
+shader_parameter/start_height = 0.0
+shader_parameter/end_height = 0.62
+shader_parameter/mask = ExtResource("6_gxqqi")
+shader_parameter/tile = ExtResource("6_s07cj")
+shader_parameter/tile_pixels = 32
+shader_parameter/mask_x = 68
+shader_parameter/freqs = PackedFloat32Array(1, 3, 5)
+shader_parameter/amp = 1.0
+shader_parameter/amps = PackedFloat32Array(0.2, 0.03, 0.02)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gs8gv"]
+shader = ExtResource("5_85s1j")
+shader_parameter/start_height = 0.0
+shader_parameter/end_height = 0.355
+shader_parameter/mask = ExtResource("6_gxqqi")
+shader_parameter/tile = ExtResource("7_gxqqi")
+shader_parameter/tile_pixels = 32
+shader_parameter/mask_x = 68
+shader_parameter/freqs = PackedFloat32Array(1, 2, 4)
+shader_parameter/amp = 1.0
+shader_parameter/amps = PackedFloat32Array(0.1, 0.005, 0.005)
+
 [node name="ParfaitGlass" type="Node2D" unique_id=782703709]
+texture_filter = 1
 script = ExtResource("1_104l6")
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_hqcym")]
@@ -29,24 +79,32 @@ shape = SubResource("RectangleShape2D_a2xff")
 [node name="ParfaitGlassBottom" type="Sprite2D" parent="." unique_id=1221057153]
 texture = ExtResource("4_gxqqi")
 
+[node name="Layer4" type="Sprite2D" parent="." unique_id=505479416]
+visible = false
+material = SubResource("ShaderMaterial_onfpi")
+position = Vector2(0, -30)
+texture = ExtResource("6_gxqqi")
+
+[node name="Layer3" type="Sprite2D" parent="." unique_id=962320154]
+visible = false
+material = SubResource("ShaderMaterial_gxqqi")
+position = Vector2(0, -30)
+texture = ExtResource("6_gxqqi")
+
+[node name="Layer2" type="Sprite2D" parent="." unique_id=301515198]
+visible = false
+material = SubResource("ShaderMaterial_s07cj")
+position = Vector2(0, -30)
+texture = ExtResource("6_gxqqi")
+
 [node name="Layer1" type="Sprite2D" parent="." unique_id=1831863730]
 visible = false
-texture = ExtResource("5_onfpi")
-
-[node name="Layer2" type="Sprite2D" parent="." unique_id=1823699954]
-visible = false
-texture = ExtResource("6_xx56j")
-
-[node name="Layer3" type="Sprite2D" parent="." unique_id=1204100898]
-visible = false
-texture = ExtResource("7_r7kkv")
-
-[node name="Layer4" type="Sprite2D" parent="." unique_id=1783430614]
-visible = false
-texture = ExtResource("8_0ulme")
+material = SubResource("ShaderMaterial_gs8gv")
+position = Vector2(0, -30)
+texture = ExtResource("6_gxqqi")
 
 [node name="ParfaitGlassTop" type="Sprite2D" parent="." unique_id=798951126]
-texture = ExtResource("4_gxqqi")
+texture = ExtResource("9_onfpi")
 
 [connection signal="input_event" from="ClickableRegion" to="ClickableRegion" method="_on_input_event"]
 [connection signal="mouse_entered" from="ClickableRegion" to="ClickableRegion" method="_on_mouse_entered"]

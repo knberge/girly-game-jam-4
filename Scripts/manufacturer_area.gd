@@ -3,8 +3,6 @@ class_name ManufacturerArea
 
 ## String of path to scene you want to manufacture
 @export var scene_path = "res://Scenes/TestAndTemp/draggable_rect.tscn" # placeholder image for base class
-## String of name of the objects to manufacture (currently only used for ingredients)
-@export var obj_name = ""
 
 var obj_scene: Variant
 
@@ -14,9 +12,11 @@ func _ready() -> void:
 	obj_scene = load(scene_path) # load so that scene_path can be dynamic
 	spawn()
 
+func initialize_obj(obj: Variant):
+	pass
+
 func spawn():
 	var obj = obj_scene.instantiate()
 	add_child(obj)
-	if obj is Ingredient:
-		obj.initialize(obj_name)
+	initialize_obj(obj)
 	obj.draggable_consumed_or_destroyed.connect(spawn)

@@ -7,21 +7,27 @@ var hell_layers: Array[HellLayerData] = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	ingredients = [
-		IngredientData.new(IngredientData.IngredientType.GRANOLA, "res://Sprites/granola.png", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTREGULAR, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.COOKIES, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "res://Sprites/blueberry.png", []),
-		IngredientData.new(IngredientData.IngredientType.CHIAPUDDING, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.ONION, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTBLOOD, "res://icon.svg", []),
-		IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", []),
+		IngredientData.new(IngredientData.IngredientType.GRANOLA, "res://Sprites/granola.png", "res://Sprites/granola_parfait.png", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTREGULAR, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.COOKIES, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "res://Sprites/blueberry.png", "res://Sprites/blueberry_parfait.png", []),
+		IngredientData.new(IngredientData.IngredientType.CHIAPUDDING, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.ONION, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTBLOOD, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", "", []),
 	]
 	
 	hell_layers = [
 		HellLayerData.new(HellLayerData.Layer.LUST, "res://Sprites/patron_lust.png"),
 		HellLayerData.new(HellLayerData.Layer.GLUTTONY, "res://Sprites/patron_glutton.png"),
 	]
+
+func get_by_type(ingr_type: IngredientData.IngredientType) -> IngredientData:
+	for ingredient in ingredients:
+		if ingredient.id == ingr_type:
+			return ingredient
+	return ingredients[0] # should be unreachable
 
 func random_hell_layer() -> HellLayerData:
 	return hell_layers[randi() % len(hell_layers)]
