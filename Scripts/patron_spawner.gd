@@ -1,4 +1,7 @@
 extends Node2D
+class_name PatronSpawner
+
+signal new_patron_spawned(patron: Patron)
 
 @onready var patron_scene: Resource
 @onready var stop := $Stop
@@ -7,10 +10,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	patron_scene = preload("res://Scenes/patron.tscn")
-	spawn()
 
 func spawn():
 	var patron = patron_scene.instantiate()
+	new_patron_spawned.emit(patron)
 	add_child(patron)
 	patron.initialize(
 		IngredientManager.random_hell_layer(),

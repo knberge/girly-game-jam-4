@@ -2,14 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://divlfw2d85wv" path="res://Sprites/background_back.png" id="1_6ev3c"]
 [ext_resource type="PackedScene" uid="uid://b1ru6cy7wciq2" path="res://Scenes/ingredient_station.tscn" id="1_52fb6"]
+[ext_resource type="Script" uid="uid://ccft8thekyfar" path="res://Scripts/game_manager.gd" id="1_huasi"]
 [ext_resource type="Texture2D" uid="uid://cq12ica03kkis" path="res://Sprites/background_counter.png" id="2_maf8m"]
 [ext_resource type="Texture2D" uid="uid://ctmkfdf4k0502" path="res://Sprites/background_fridge.png" id="3_huasi"]
 [ext_resource type="Script" uid="uid://b231xkrkfn7i7" path="res://Scripts/patron_spawner.gd" id="4_x6ack"]
 [ext_resource type="PackedScene" uid="uid://b71bknvt03cp5" path="res://Scenes/TestAndTemp/base_manufacturer.tscn" id="5_maf8m"]
 [ext_resource type="AudioStream" uid="uid://c7kfxsmxv627i" path="res://Sounds/background_music.wav" id="7_maf8m"]
+[ext_resource type="PackedScene" uid="uid://blle1bw85xi2j" path="res://Scenes/display_total.tscn" id="9_m1efj"]
 
 [node name="MainScene" type="Node2D" unique_id=631355962]
 texture_filter = 1
+script = ExtResource("1_huasi")
 
 [node name="Background" type="Node2D" parent="." unique_id=1341159298]
 position = Vector2(400, 225)
@@ -48,3 +51,8 @@ position = Vector2(1215, 0)
 [node name="Background Music" type="AudioStreamPlayer2D" parent="." unique_id=1104060843]
 stream = ExtResource("7_maf8m")
 autoplay = true
+
+[node name="DisplayTotal" parent="." unique_id=1098478553 instance=ExtResource("9_m1efj")]
+offset_left = 540.0
+offset_right = 800.0
+offset_bottom = 50.0

@@ -1,6 +1,8 @@
 extends Node2D
+class_name Patron
 
 signal exit()
+signal increased_total_satisfaction(gained_satisfaction: int)
 
 @onready var consumerArea = $ConsumerArea
 @onready var sprite = $Patron1
@@ -77,4 +79,5 @@ func calculate_satisfaction(parfait_ingredients: Array[IngredientData.Ingredient
 	for r_ingr in requested_ingredients:
 		if r_ingr.id in parfait_ingredients:
 			satisfaction += satisf_per_ingredient
+	increased_total_satisfaction.emit(satisfaction)
 	return satisfaction
