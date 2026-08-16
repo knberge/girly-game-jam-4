@@ -1,6 +1,6 @@
 extends Node2D
 
-signal exit(satisfaction: int)
+signal exit()
 
 @onready var consumerArea = $ConsumerArea
 @onready var sprite = $Patron1
@@ -69,5 +69,5 @@ func start_waiting():
 	speechBubble.request(requested_ingredients)
 
 func finish_exiting():
-	exit.emit(satisfaction)
+	exit.emit()
 	queue_free()
