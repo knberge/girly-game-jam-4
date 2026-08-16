@@ -16,7 +16,6 @@ script = ExtResource("1_70mii")
 
 [node name="DraggableSprite" type="Sprite2D" parent="." unique_id=1114778241]
 material = SubResource("CanvasItemMaterial_vp2j4")
-scale = Vector2(-0.773, 0.775)
 texture = ExtResource("2_pc44i")
 
 [node name="ClickableRegion" type="Area2D" parent="." unique_id=939202476]
