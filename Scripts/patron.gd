@@ -22,13 +22,21 @@ var requested_ingredients: Array[IngredientData]
 var satisfaction: int = 0
 var satisf_per_ingredient: int = 3
 
-func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> void:
+func initialize(
+		hell_layer_: HellLayerData,
+		stop_: Vector2,
+		leave_: Vector2,
+		difficulty_: int,
+		) -> void:
 	sprite.texture = load(hell_layer_.patron_sprite)
 	hell_layer = hell_layer_
 	state = State.ENTERING
 	stop = stop_
 	leave = leave_
-	requested_ingredients = IngredientManager.random_ingredients(4)
+	requested_ingredients = IngredientManager.random_ingredients(difficulty_)
+	print("difficulty is ", difficulty_)
+	for i in range(5):
+		print(IngredientManager.random_ingredients(difficulty_))
 	consumerArea.block_consume = true # should only be false when in waiting state
 
 func _ready() -> void:

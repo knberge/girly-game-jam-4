@@ -16,3 +16,4 @@ func on_new_patron(patron: Patron):
 func update_total(amount: int):
 	total_satisfaction += amount
 	display_total.update_total_text(total_satisfaction)
+	patron_spawner.set_difficulty(int(float(total_satisfaction)/6))

@@ -2,6 +2,7 @@ extends Node
 
 var ingredients: Array[IngredientData] = []
 var hell_layers: Array[HellLayerData] = []
+var max_parfait_layers: int = 4
 
 
 # Called when the node enters the scene tree for the first time.
@@ -37,7 +38,7 @@ func _random_ingredient(max_num: int) -> int:
 
 func random_ingredients(difficulty: int) -> Array[IngredientData]:
 	var max_num = min(difficulty + 2, len(ingredients))
-	var num_items = 1 + randi() % (min(int(1 + float(difficulty) / 3), len(hell_layers)))
+	var num_items = 1 + randi() % (min(int(1 + float(difficulty) / 3), max_parfait_layers))
 	var ingredient_idxs = []
 	while len(ingredient_idxs) < num_items:
 		var new_idx = _random_ingredient(max_num)
