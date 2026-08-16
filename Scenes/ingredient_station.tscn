@@ -9,9 +9,17 @@ position = Vector2(10, 10)
 ingredient_type = 7
 
 [node name="IngredientManufacturer2" parent="." unique_id=1856715024 instance=ExtResource("2_ojhjg")]
-position = Vector2(160, 10)
+position = Vector2(91, 15)
 ingredient_type = 4
 
 [node name="IngredientManufacturer3" parent="." unique_id=463827362 instance=ExtResource("2_ojhjg")]
-position = Vector2(310, 10)
+position = Vector2(224, 13)
 ingredient_type = 6
+
+[node name="IngredientManufacturer4" parent="." unique_id=331840399 instance=ExtResource("2_ojhjg")]
+position = Vector2(44, 55)
+ingredient_type = 1
+
+[node name="IngredientManufacturer5" parent="." unique_id=2094957437 instance=ExtResource("2_ojhjg")]
+position = Vector2(157, 60)
+ingredient_type = 2

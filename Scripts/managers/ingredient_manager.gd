@@ -8,14 +8,14 @@ var hell_layers: Array[HellLayerData] = []
 func _ready() -> void:
 	ingredients = [
 		IngredientData.new(IngredientData.IngredientType.GRANOLA, "res://Sprites/granola.png", "res://Sprites/granola_parfait.png", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTREGULAR, "res://icon.svg", "", []),
-		IngredientData.new(IngredientData.IngredientType.COOKIES, "res://icon.svg", "", []),
+		IngredientData.new(IngredientData.IngredientType.YOGHURTREGULAR, "res://Sprites/yoghurt.png", "res://Sprites/yoghurt_parfait.png", []),
 		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "res://Sprites/blueberry.png", "res://Sprites/blueberry_parfait.png", []),
-		IngredientData.new(IngredientData.IngredientType.CHIAPUDDING, "res://icon.svg", "", []),
-		IngredientData.new(IngredientData.IngredientType.ONION, "res://icon.svg", "", []),
-		IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://icon.svg", "", []),
-		IngredientData.new(IngredientData.IngredientType.YOGHURTBLOOD, "res://icon.svg", "", []),
-		IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", "", []),
+		IngredientData.new(IngredientData.IngredientType.ONION, "res://Sprites/onion.png", "res://Sprites/onion_parfait.png", []),
+		IngredientData.new(IngredientData.IngredientType.CHIAPUDDING, "res://Sprites/chia.png", "res://Sprites/chia_parfait.png", []),
+		#IngredientData.new(IngredientData.IngredientType.COOKIES, "res://icon.svg", "", []),
+		#IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://icon.svg", "", []),
+		#IngredientData.new(IngredientData.IngredientType.YOGHURTBLOOD, "res://icon.svg", "", []),
+		#IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", "", []),
 	]
 	
 	hell_layers = [

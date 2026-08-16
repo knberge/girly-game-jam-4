@@ -31,7 +31,7 @@ scene_path = "res://Scenes/parfait_glass.tscn"
 
 [node name="IngredientStation" parent="." unique_id=864927845 instance=ExtResource("1_52fb6")]
 z_index = 100
-position = Vector2(0, 206)
+position = Vector2(28, 215)
 
 [node name="PatronSpawner" type="Node2D" parent="." unique_id=1975020334]
 z_index = 1
