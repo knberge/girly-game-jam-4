@@ -12,10 +12,10 @@ func _ready() -> void:
 		IngredientData.new(IngredientData.IngredientType.BLUEBERRY, "res://Sprites/blueberry.png", "res://Sprites/blueberry_parfait.png", []),
 		IngredientData.new(IngredientData.IngredientType.ONION, "res://Sprites/onion.png", "res://Sprites/onion_parfait.png", []),
 		IngredientData.new(IngredientData.IngredientType.CHIAPUDDING, "res://Sprites/chia.png", "res://Sprites/chia_parfait.png", []),
+		IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://Sprites/strawberry.png", "res://Sprites/strawberry_parfait.png", []),
+		IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", "res://Sprites/brain_parfait.png", []),
 		#IngredientData.new(IngredientData.IngredientType.COOKIES, "res://icon.svg", "", []),
-		#IngredientData.new(IngredientData.IngredientType.STRAWBERRY, "res://icon.svg", "", []),
 		#IngredientData.new(IngredientData.IngredientType.YOGHURTBLOOD, "res://icon.svg", "", []),
-		#IngredientData.new(IngredientData.IngredientType.BRAIN, "res://Sprites/brain.png", "", []),
 	]
 	
 	hell_layers = [
