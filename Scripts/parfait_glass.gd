@@ -9,17 +9,20 @@ class_name ParfaitGlass
 	$Layer4
 ]
 
-@export var max_layers : int = 4
+@export var max_layers: int = 4
 
 var added_ingredients := []
 
+# TODO: add back in when ready to code glass snapping into place
 # override to prevent deleting the glass
-func drop_bad():
-	print("bad drop: glass")
-
+#func drop_bad():
+	#print("bad drop: glass")
+	#return_to_spawn_point()
+#
 # override to prevent deleting the glass
-func drop_on_nothing():
-	print("No area encountered: glass")
+#func drop_on_nothing():
+	#print("No area encountered: glass")
+	#return_to_spawn_point()
 
 func _ready() -> void:
 	consumerArea.consume.connect(_on_consume)
