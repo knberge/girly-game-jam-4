@@ -1,6 +1,6 @@
 extends Node
 
-var ingredients : Array[IngredientData] = []
+var ingredients: Array[IngredientData] = []
 var hell_layers: Array[HellLayerData] = []
 
 
@@ -36,14 +36,14 @@ func _random_ingredient(max_num: int) -> int:
 	return randi() % max_num
 
 func random_ingredients(difficulty: int) -> Array[IngredientData]:
-	var max_num = min(difficulty+2, len(ingredients))
-	var num_items = 1 + randi() % (min(int(1+difficulty/3), len(hell_layers)))
+	var max_num = min(difficulty + 2, len(ingredients))
+	var num_items = 1 + randi() % (min(int(1 + float(difficulty) / 3), len(hell_layers)))
 	var ingredient_idxs = []
 	while len(ingredient_idxs) < num_items:
 		var new_idx = _random_ingredient(max_num)
 		if not new_idx in ingredient_idxs:
 			ingredient_idxs.append(new_idx)
-	var out : Array[IngredientData] = []
+	var out: Array[IngredientData] = []
 	for i in ingredient_idxs:
 		out.append(ingredients[i])
 	return out

@@ -12,7 +12,7 @@ func _ready() -> void:
 	obj_scene = load(scene_path) # load so that scene_path can be dynamic
 	spawn()
 
-func initialize_obj(obj: Variant):
+func initialize_obj(_obj: Variant):
 	pass
 
 func spawn():

@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var patron_scene : Resource
+@onready var patron_scene: Resource
 @onready var stop := $Stop
 @onready var leave := $Leave
 
@@ -19,5 +19,5 @@ func spawn():
 	)
 	patron.exit.connect(_on_exit)
 	
-func _on_exit(satisfaction: int):
+func _on_exit(_satisfaction: int):
 	spawn()
