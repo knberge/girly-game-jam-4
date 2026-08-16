@@ -28,6 +28,8 @@ func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if event.is_released() and clickable_region.clicked and not block_drag:
 			check_overlapping_areas()
+		elif event.is_pressed():
+			clickable_region.on_mouse_press()
 
 func check_overlapping_areas():
 	var encountered_area = false
