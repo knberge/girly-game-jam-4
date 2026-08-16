@@ -1,6 +1,6 @@
 extends Node2D
 
-signal exit(satisfaction: int)
+signal exit()
 
 @onready var consumerArea = $ConsumerArea
 @onready var sprite = $Patron1
@@ -17,7 +17,8 @@ var start_time: float
 var stop: Vector2
 var leave: Vector2
 var requested_ingredients: Array[IngredientData]
-var satisfaction: int
+var satisfaction: int = 0
+var satisf_per_ingredient: int = 3
 
 func initialize(hell_layer_: HellLayerData, stop_: Vector2, leave_: Vector2) -> void:
 	sprite.texture = load(hell_layer_.patron_sprite)
@@ -54,9 +55,8 @@ func rate_glass(glass: ParfaitGlass):
 	if glass.is_empty():
 		glass.drop_bad()
 		return
-	satisfaction = 10
 	glass.drop_good()
-	speechBubble.rate(satisfaction)
+	speechBubble.rate(calculate_satisfaction(glass.added_ingredients))
 	start_exiting()
 
 func start_exiting():
@@ -69,5 +69,12 @@ func start_waiting():
 	speechBubble.request(requested_ingredients)
 
 func finish_exiting():
-	exit.emit(satisfaction)
+	exit.emit()
 	queue_free()
+
+func calculate_satisfaction(parfait_ingredients: Array[IngredientData.IngredientType]):
+	satisfaction = 0
+	for r_ingr in requested_ingredients:
+		if r_ingr.id in parfait_ingredients:
+			satisfaction += satisf_per_ingredient
+	return satisfaction

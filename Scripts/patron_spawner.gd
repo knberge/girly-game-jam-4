@@ -19,5 +19,5 @@ func spawn():
 	)
 	patron.exit.connect(_on_exit)
 	
-func _on_exit(_satisfaction: int):
+func _on_exit():
 	spawn()

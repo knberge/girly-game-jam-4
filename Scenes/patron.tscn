@@ -7,6 +7,9 @@
 [ext_resource type="Script" uid="uid://c6odke6dt14gg" path="res://Scripts/patron_request_loc.gd" id="5_8ayes"]
 [ext_resource type="Script" uid="uid://c52i4nxlv5w06" path="res://Scripts/patron_request.gd" id="5_p88rn"]
 
+[sub_resource type="Theme" id="Theme_p88rn"]
+default_font_size = 26
+
 [node name="Patron" type="Node2D" unique_id=758867252]
 z_index = 1
 script = ExtResource("1_yxe66")
@@ -67,11 +70,14 @@ position = Vector2(41, 8)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Speech" unique_id=543825088]
 visible = false
-offset_left = -26.0
-offset_top = -25.0
+offset_left = -39.0
+offset_top = -45.0
 offset_right = 46.0
-offset_bottom = 5.0
+offset_bottom = 19.0
+theme = SubResource("Theme_p88rn")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ConsumerArea" parent="." unique_id=1015795378 instance=ExtResource("2_6xk4x")]
 position = Vector2(-96, -170)
