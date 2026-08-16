@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://blle1bw85xi2j"]
 
+[ext_resource type="Script" uid="uid://dpho73skp6t8r" path="res://Scripts/display_total.gd" id="1_7rmws"]
+
 [sub_resource type="Theme" id="Theme_4bsju"]
 default_font_size = 18
 
@@ -17,6 +19,7 @@ text = "Soul Energy Collected: 0"
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("1_7rmws")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=55155355]
 z_index = -1

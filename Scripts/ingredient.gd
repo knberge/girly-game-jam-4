@@ -11,7 +11,6 @@ func initialize(ingredient_type: IngredientData.IngredientType):
 
 # handle behavior when this ingredient is added to current recipe
 func use_ingredient():
-	print("used ingredient ", data)
 	destroy()
 
 func _to_string() -> String:
